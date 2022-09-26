@@ -2,7 +2,7 @@ const express= require("express")
 const cors=require("cors")
 const morgan=require("morgan")
 const path=require("path")
-require("dotenv").config({path:"./.env.local"})
+// require("dotenv").config({path:"./.env.local"})
 
 const app=express()
 if(process.env.NODE_ENV==="production"){
