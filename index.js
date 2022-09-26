@@ -6,10 +6,10 @@ require("dotenv").config({path:"./.env.local"})
 
 const app=express()
 if(process.env.NODE_ENV==="production"){
-app.use(express.static(path.join(__dirname,"..","client","build")))
+app.use(express.static(path.join(__dirname,"client","build")))
 
 app.use("*",(req,res)=>{
-res.sendFile(path.join(__dirname,"..","client","build","index.html"))
+res.sendFile(path.join(__dirname,"client","build","index.html"))
 })
 }
 app.listen(3001,()=>console.log("Listening on port 3001"))

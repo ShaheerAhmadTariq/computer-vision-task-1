@@ -1,1 +1,2 @@
 npx create-react-app app-name
+heroku password = RXkz^3t6bE"$f8~
