@@ -3,12 +3,12 @@ const cors=require("cors")
 const morgan=require("morgan")
 const path=require("path")
 require("dotenv").config({path:"./.env.local"})
-const port=3001||process.env.PORT
+const port=process.env.PORT||3001
 const app=express()
 if(process.env.NODE_ENV==="production"){
 app.use(express.static(path.join(__dirname,"client","build")))
 
-app.use("*",(req,res)=>{
+app.get("*",(req,res)=>{
 res.sendFile(path.resolve(__dirname,"client","build","index.html"))
 })
 }
