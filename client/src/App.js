@@ -1,6 +1,6 @@
 import './App.css';
 import React from "react"
-import ReactPlayer from 'react-player';
+// import ReactPlayer from 'react-player';
 
 function App() {
   const [state, setState] = React.useState({
